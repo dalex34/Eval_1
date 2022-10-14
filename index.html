@@ -8,35 +8,43 @@
     <title>MER.SEA</title>
   </head>
   <body>
-    <!-- Header avec logo et menu navigation -->
+    <!-- Header avec logo et menu reseau social -->
     <header>
       <nav aria-label="socials links" class="navHead">
         <div class="logo">MER.SEA</div>
 
         <ul class="menuSocialResponsive">
-          <a href="#" class="socialFacebook"
-            ><li><img src="./Medias/facebook.png" alt="" width="45px" /></li
-          ></a>
-          <a href="#" class="socialInstagram"
-            ><li>
-              <img src="./Medias/instagram.png" alt="" width="45px" /></li></a
-          ><a href="#" class="socialTwitter"
-            ><li><img src="./Medias/twitter.png" alt="" width="45px" /></li
-          ></a>
+          <li>
+            <a href="#" class="socialFacebook"
+              ><img src="./Medias/facebook.png" alt="" width="45px"
+            /></a>
+          </li>
+          <li>
+            <a href="#" class="socialInstagram"
+              ><img src="./Medias/instagram.png" alt="" width="45px" />
+            </a>
+          </li>
+          <li>
+            <a href="#" class="socialTwitter"
+              ><img src="./Medias/twitter.png" alt="" width="45px"
+            /></a>
+          </li>
         </ul>
       </nav>
     </header>
     <!--Menu de navigation-->
     <nav aria-label="menu" class="navBar">
-      <div class="logoNav">MER.SEA</div>
-      <div class="ham"></div>
-      <ul class="menuBar">
-        <a href="#" class="menu"><li>Notre Charte</li></a>
-        <a href="#" class="menu"><li>Nos Actions</li></a>
-        <a href="#" class="menu"><li>Notre Equipe</li></a>
-        <a href="#" class="menu"><li>Nos Evenements</li></a>
-        <a href="#" class="menu"><li>Contact</li></a>
-      </ul>
+      <div class="containerMenu">
+        <input id="menuHamToggle" type="checkbox" />
+        <div class="logoNav">MER.SEA</div>
+        <div class="menuHam"></div>
+        <ul class="menuLink">
+          <li><a href="#" class="menu">Le Projet</a></li>
+          <li><a href="#" class="menu">Actions</a></li>
+          <li><a href="#" class="menu">Agenda</a></li>
+          <li><a href="#" class="menu">Contact</a></li>
+        </ul>
+      </div>
     </nav>
     <!-- Contenu principal -->
     <main>
@@ -116,6 +124,6 @@
         </p>
       </section>
     </main>
-    <footer>Copyright</footer>
+    <footer>©Copyright</footer>
   </body>
 </html>
