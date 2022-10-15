@@ -8,11 +8,10 @@
     <title>MER.SEA</title>
   </head>
   <body>
-    <!-- Header avec logo et menu reseau social -->
+    <!-- Header avec logo et menu reseau social (Mobile-first)  -->
     <header>
       <nav aria-label="socials links" class="navHead">
         <div class="logo">MER.SEA</div>
-
         <ul class="menuSocialResponsive">
           <li>
             <a href="#" class="socialFacebook"
@@ -30,21 +29,37 @@
             /></a>
           </li>
         </ul>
+        <!--Menu reseau social secondaire (Desktop)-->
+        <ul class="menuSocial">
+          <a href="#" class="socialFacebook"><li>FACEBOOK</li></a>
+          <a href="#" class="socialInstagram"><li>INSTAGRAM</li></a
+          ><a href="#" class="socialTwitter"><li>TWITTER</li></a>
+        </ul>
       </nav>
     </header>
-    <!--Menu de navigation-->
-    <nav aria-label="menu" class="navBar">
+    <!--Menu de navigation (Mobile-first)-->
+    <nav aria-label="menu" class="navBarResponsive">
       <div class="containerMenu">
         <input id="menuHamToggle" type="checkbox" />
         <div class="logoNav">MER.SEA</div>
         <div class="menuHam"></div>
-        <ul class="menuLink">
+        <ul class="menuLinkResponsive">
           <li><a href="#project" class="menu">Le Projet</a></li>
           <li><a href="#actions" class="menu">Actions</a></li>
           <li><a href="#agenda" class="menu">Agenda</a></li>
           <li><a href="#contact" class="menu">Contact</a></li>
         </ul>
       </div>
+    </nav>
+    <!--Menu de navigation secondaire (Desktop)-->
+    <nav aria-label="menu" class="navBar">
+      <div class="logoNav">MER.SEA</div>
+      <ul class="menuLink">
+        <li><a href="#project" class="menu">Le Projet</a></li>
+        <li><a href="#actions" class="menu">Actions</a></li>
+        <li><a href="#agenda" class="menu">Agenda</a></li>
+        <li><a href="#contact" class="menu">Contact</a></li>
+      </ul>
     </nav>
     <!-- Contenu principal -->
     <main>

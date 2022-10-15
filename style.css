@@ -38,6 +38,9 @@ nav .logo {
   font-size: 30px;
   padding: 6px;
 }
+.menuSocial{
+  display: none;
+}
 .menuSocialResponsive {
   display: flex;
 }
@@ -48,7 +51,10 @@ nav .logo {
 .menuSocialResponsive li img {
   padding: 0 0.2rem;
 }
-.navBar {
+.navBar{
+  display: none;
+}
+.navBarResponsive {
   position: sticky;
   display: flex;
   justify-content: space-between;
@@ -58,7 +64,7 @@ nav .logo {
   background: rgb(0, 12, 15);
   box-shadow: 0px 05px 5px rgba(23, 22, 22, 0.496);
 }
-.navBar .logoNav {
+.navBarResponsive .logoNav {
   position: absolute;
   left: 5%;
   width: 150px;
@@ -68,15 +74,17 @@ nav .logo {
   padding: 8px 0px 0px;
   transition: 0.5s;
 }
-.menuLink {
+.menuLinkResponsive {
   position: relative;
   display: flex;
   align-items: center;
   right: -100%;
   transition: 00.2s;
+  padding-right: 10vw;
 }
-.menuLink li a {
-  margin-left: 3.8vw;
+
+.menuLinkResponsive li a {
+   margin-left: 4vw;
   color: whitesmoke;
 }
 
@@ -124,21 +132,21 @@ nav .logo {
   top: 10px;
   height: 4px;
 }
-.navBar input[type="checkbox"]:checked ~ .menuHam::after {
+.navBarResponsive input[type="checkbox"]:checked ~ .menuHam::after {
   transform: rotate(90deg) translateX(-10px);
 }
-.navBar input[type="checkbox"]:checked ~ .menuHam::before {
+.navBarResponsive input[type="checkbox"]:checked ~ .menuHam::before {
   transform: rotate(90deg) translateX(10px);
   opacity: 0;
 }
-.navBar input[type="checkbox"]:checked ~ .menuHam {
+.navBarResponsive input[type="checkbox"]:checked ~ .menuHam {
   transform: rotate(45deg);
 }
-.navBar input[type="checkbox"]:checked ~ .menuLink {
+.navBarResponsive input[type="checkbox"]:checked ~ .menuLinkResponsive {
   right: 0;
 }
 
-.navBar input[type="checkbox"]:checked ~ .logoNav {
+.navBarResponsive input[type="checkbox"]:checked ~ .logoNav {
   opacity: 0;
 }
 section p {
@@ -155,4 +163,62 @@ footer {
   color: whitesmoke;
   text-align: center;
   padding-top: 1rem;
+}
+@media screen and (min-width: 650px) {
+  .menuSocial {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+    border: 3px solid;
+  }
+  .menuSocialResponsive {
+    display: none;
+  }
+  .menuSocial li {
+    display: inline-block;
+    padding-right: 2.5vw;
+    margin-left: 2.5vw;
+    color: black;
+    font-size: 20px;
+  }
+  .titleSocial li {
+    padding-bottom: 5px;
+    font-size: 25px;
+  }
+  .navBar {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    height: 3em;
+    width: 100%;
+    background: rgb(0, 12, 15);
+    box-shadow: 0px 05px 5px rgba(23, 22, 22, 0.496);
+    overflow: hidden;
+  }
+  .navBar .logoNav {
+    width: 150px;
+    height: 50px;
+    color: whitesmoke;
+    font-size: 30px;
+    padding: 8px 0px 0px 4vw;
+    transition: 0.5s;
+  }
+  .navBarResponsive {
+    display: none;
+  }
+  .menuLinkResponsive{
+    display: none;
+  }
+  .menuLink {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 6%;
+  }
+  .menuLink li a {
+    color: whitesmoke;
+    display: inline-block;
+    margin-left: 6.2vw;
+    font-size: 20px;
+  }
 }
