@@ -10,7 +10,6 @@
 body {
   overflow-y: scroll;
   overflow-x: hidden;
-  font-family: Oswald;
   perspective: 1px;
 }
 header {
@@ -168,31 +167,35 @@ nav .logo {
   opacity: 0;
 }
 
-.floatLeft {
-  float: left;
-  margin: 5px;
-}
-.floatRight {
-  float: right;
-  margin: 5px;
-}
-section {
+
+.section {
   position: relative;
-  padding: 20vh 10%;
+  padding: 20vh 10vmin;
   min-height: 100vh;
   width: 100%;
-  box-sizing: border-box;
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.7), 0 -15px 15px rgba(0, 0, 0, 0.7);
   background: 50% 50% / cover;
   z-index: -2;
 }
-.text img {
-  width: 70%;
-  height: 70%;
-filter:sepia(50%) opacity(80%);
-  padding-right: 10px;
+#contact {
+  padding: 20vh 10vmin;
+  min-height: 100vh;
+  width: 100%;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.7), 0 -15px 15px rgba(0, 0, 0, 0.7);
+  background: 50% 50% / cover; 
+  background-image: url("Medias/5.jpg");
+  z-index: -3;
 }
-.text {
+.artContainer img {
+  width: 95%;
+  filter:sepia(50%) opacity(80%);
+  margin: 20px 2%;
+  border-radius:1.5%;
+}
+.artContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 95%;
   height: 80%;
   margin: 0 2%;
@@ -200,23 +203,24 @@ filter:sepia(50%) opacity(80%);
   background: rgba(200, 200, 200, 0.893);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   overflow: hidden;
-  padding: 1%;
+  padding: 3%;
 }
-.text p {
-  text-align: start;
+.artContainer p {
+  
   font-size: 1em;
   margin: 0 2%;
+  
 }
-#project .text {
+#project .artContainer {
   margin-left: auto;
   margin-right: auto;
 }
-#actions .text {
+#actions .artContainer {
   transition: ease-in;
   margin-left: 0;
   margin-right: auto;
 }
-#agenda .text {
+#agenda .artContainer {
   margin-left: auto;
   margin-right: 0;
 }
@@ -242,35 +246,41 @@ footer {
   background-image: url("./Medias/3.jpg");
   background-attachment: fixed;
 }
-#contact {
-  background-image: url("Medias/5.jpg");
-  transform: translateZ(-1px) scale(1);
-  z-index: -3;
-}
+
 form {
   max-width: 420px;
   margin: 50px auto;
+  
+}
+.contacts {
+  width: 95%;
+  margin: 0 2%;
+  border-radius: 5px;
+  background: rgba(200, 200, 200, 0.893);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  padding: 3%;
+}
+.contacts h2{
+text-align: center;
 }
 
 .fInput {
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
+  color: rgb(12, 12, 12);
+  font-size: 1rem;
   border-radius: 5px;
   line-height: 22px;
   background-color: transparent;
-  border: 2px solid #1e1d1dd4;
+  border: 2px solid #1e1d1d;
   transition: all 0.3s;
-  padding: 13px;
-  margin-bottom: 15px;
+  padding: 1px;
+  margin-bottom: 10px;
   width: 100%;
-  box-sizing: border-box;
-  outline: 0;
+  outline: none;
 }
 
 .fInput:focus {
-  border: 2px solid #585757;
+  background-color: rgba(245, 245, 245, 0.673);
 }
 
 textarea {
@@ -278,7 +288,6 @@ textarea {
   line-height: 150%;
   resize: vertical;
 }
-
 .submit {
   width: 100%;
   background: #373636;
@@ -291,7 +300,7 @@ textarea {
   padding-bottom: 10px;
   transition: all 0.3s;
   margin-top: -4px;
-  font-weight: 700;
+  
 }
 .submit:hover {
   background: #010101;
@@ -352,5 +361,19 @@ textarea {
     display: inline-block;
     margin-left: 6.2vw;
     font-size: 20px;
+  }
+  .floatLeft {
+    float: left;
+    margin: 5px;
+  }
+  .floatRight {
+    float: right;
+    margin: 5px;
+  }
+  .artContainer {
+    display: block;
+  }
+  .artContainer img {
+    max-width: 50%;
   }
 }
