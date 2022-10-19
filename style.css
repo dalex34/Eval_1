@@ -11,6 +11,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   perspective: 1px;
+  background-image: #f5f5f7;
 }
 header {
   width: 100%;
@@ -27,7 +28,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 10px 4%;
+  padding: 1px 4%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,12 +37,10 @@ header {
 }
 
 nav .logo {
-  text-align: center;
   width: 150px;
   height: 50px;
-  border: 3px solid;
   font-size: 30px;
-  padding: 6px;
+  padding: 9px 4px;
 }
 .menuSocial {
   display: none;
@@ -68,6 +67,15 @@ nav .logo {
   z-index: -1;
   object-fit: cover;
 }
+header h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  color: #1d1d1f;
+  text-align: center;
+  font-size: 8vh;
+  letter-spacing: 8px;
+  margin-top: -100px;
+}
 .navBar {
   display: none;
 }
@@ -78,11 +86,11 @@ nav .logo {
   top: 0;
   height: 3em;
   width: 100%;
-  background: rgb(0, 12, 15);
+  background: #313132;
   box-shadow: 0px 05px 5px rgba(23, 22, 22, 0.496);
   z-index: 99999;
 }
-.navBarResponsive .logoNav {
+.navBarResponsive .logoNav a {
   position: absolute;
   left: 5%;
   width: 150px;
@@ -100,12 +108,10 @@ nav .logo {
   transition: 00.2s;
   padding-right: 10vw;
 }
-
 .menuLinkResponsive li a {
   margin-left: 4vw;
   color: whitesmoke;
 }
-
 #menuHamToggle {
   position: absolute;
   display: block;
@@ -164,35 +170,40 @@ nav .logo {
   right: 0;
 }
 
-.navBarResponsive input[type="checkbox"]:checked ~ .logoNav {
+.navBarResponsive input[type="checkbox"]:checked ~ .logoNav a {
   opacity: 0;
 }
 
 .section {
   position: static;
   padding: 20vh 10vmin;
-  margin: 15px 0;
+  margin: 0px 0;
   min-height: 100vh;
   width: 100;
-  border-radius: 10px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.829), 0 -5px 5px rgba(0, 0, 0, 0.884);
-  background-position: center;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(112, 110, 110, 0.829),
+    0 -1px 1px rgba(79, 78, 78, 0.884);
+  /* background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: cover;
+  object-fit: cover; */
   z-index: -3;
 }
 #project {
-  background-image: url(/Medias/2.jpg);
+  /* background-image: url(/Medias/2.jpg); */
+  background-color: #f5f5f7;
 }
 #actions {
-  background-image: url(/Medias/3.jpg);
+  /* background-image: url(/Medias/3.jpg); */
+  background-color: #f5f5f7;
 }
 #agenda {
-  background-image: url(/Medias/5.jpg);
+  /* background-image: url(/Medias/5.jpg); */
+  background-color: #f5f5f7;
 }
 #contact {
-  background-image: url(/Medias/message_bottle.jpg);
+  /* background-image: url(/Medias/message_bottle.jpg); */
+  background-color: #f5f5f7;
 }
 .artContainer img {
   width: 95%;
@@ -208,8 +219,8 @@ nav .logo {
   height: 80%;
   margin: 0 2%;
   border-radius: 5px;
-  background: rgba(200, 200, 200, 0.774);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  background: #ffffff;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.8);
   overflow: hidden;
   padding: 3%;
 }
@@ -217,24 +228,16 @@ nav .logo {
   font-size: 1em;
   margin: 20px 2%;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-footer {
-  width: 100%;
-  height: 3em;
-  background-color: black;
-  box-shadow: 0px -2px 5px rgba(23, 22, 22, 0.377);
-  color: whitesmoke;
-  text-align: center;
-  padding-top: 1rem;
+  color: #1d1d1f;
 }
 
 form {
-  max-width: 420px;
-  margin: 50px auto;
+  max-width: 500px;
+  margin: 25px auto;
 }
 
-.contacts h2 {
+#contact h2 {
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -272,18 +275,26 @@ textarea {
   padding-top: 10px;
   padding-bottom: 10px;
   transition: all 0.3s;
-  margin-top: -4px;
+  margin-top: 10px;
 }
 
 .submit:hover {
   background: #2a2a2a;
+}
+footer {
+  width: 100%;
+  height: 3em;
+  background-color: #313132;
+  box-shadow: 0px -2px 5px rgba(23, 22, 22, 0.377);
+  color: whitesmoke;
+  text-align: center;
+  padding-top: 1rem;
 }
 @media screen and (min-width: 650px) {
   .menuSocial {
     display: flex;
     align-items: center;
     padding: 9px;
-    border: 3px solid;
   }
   .menuSocialResponsive {
     display: none;
@@ -292,7 +303,7 @@ textarea {
     display: inline-block;
     padding-right: 2.5vw;
     margin-left: 2.5vw;
-    color: black;
+    color: #313132;
     font-size: 20px;
   }
   .titleSocial li {
@@ -306,18 +317,24 @@ textarea {
     top: 0;
     height: 3em;
     width: 100%;
-    background: rgb(0, 12, 15);
+    background: #313132;
     box-shadow: 0px 05px 5px rgba(23, 22, 22, 0.496);
     overflow: hidden;
     z-index: 99999;
   }
   .navBar .logoNav {
+    display: flex;
+    align-items: flex-end;
+  }
+  .navBar .logoNav a {
     width: 150px;
     height: 50px;
     color: whitesmoke;
     font-size: 30px;
     padding: 8px 0px 0px 4vw;
     transition: 0.5s;
+    cursor: pointer;
+    margin-top: -8px;
   }
   .navBarResponsive {
     display: none;
