@@ -80,6 +80,7 @@ nav .logo {
   width: 100%;
   background: rgb(0, 12, 15);
   box-shadow: 0px 05px 5px rgba(23, 22, 22, 0.496);
+  z-index: 99999;
 }
 .navBarResponsive .logoNav {
   position: absolute;
@@ -167,30 +168,37 @@ nav .logo {
   opacity: 0;
 }
 
-
 .section {
-  position: relative;
+  position: static;
   padding: 20vh 10vmin;
+  margin: 15px 0;
   min-height: 100vh;
-  width: 100%;
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.7), 0 -15px 15px rgba(0, 0, 0, 0.7);
-  background: 50% 50% / cover;
-  z-index: -2;
+  width: 100;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.829), 0 -5px 5px rgba(0, 0, 0, 0.884);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  z-index: -3;
+}
+#project {
+  background-image: url(/Medias/2.jpg);
+}
+#actions {
+  background-image: url(/Medias/3.jpg);
+}
+#agenda {
+  background-image: url(/Medias/5.jpg);
 }
 #contact {
-  padding: 20vh 10vmin;
-  min-height: 100vh;
-  width: 100%;
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.7), 0 -15px 15px rgba(0, 0, 0, 0.7);
-  background: 50% 50% / cover; 
-  background-image: url("Medias/5.jpg");
-  z-index: -3;
+  background-image: url(/Medias/message_bottle.jpg);
 }
 .artContainer img {
   width: 95%;
-  filter:sepia(50%) opacity(80%);
+  filter: sepia(50%) opacity(80%);
   margin: 20px 2%;
-  border-radius:1.5%;
+  border-radius: 1.5%;
 }
 .artContainer {
   display: flex;
@@ -200,30 +208,17 @@ nav .logo {
   height: 80%;
   margin: 0 2%;
   border-radius: 5px;
-  background: rgba(200, 200, 200, 0.893);
+  background: rgba(200, 200, 200, 0.774);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   overflow: hidden;
   padding: 3%;
 }
 .artContainer p {
-  
   font-size: 1em;
-  margin: 0 2%;
-  
+  margin: 20px 2%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-#project .artContainer {
-  margin-left: auto;
-  margin-right: auto;
-}
-#actions .artContainer {
-  transition: ease-in;
-  margin-left: 0;
-  margin-right: auto;
-}
-#agenda .artContainer {
-  margin-left: auto;
-  margin-right: 0;
-}
+
 footer {
   width: 100%;
   height: 3em;
@@ -233,40 +228,18 @@ footer {
   text-align: center;
   padding-top: 1rem;
 }
-#project {
-  background-image: url("./Medias/1.jpg");
-  background-attachment: fixed;
-}
-#actions {
-  background-image: url("./Medias/2.jpg");
-  transform: translateZ(-1px) scale(1);
-  z-index: -3;
-}
-#agenda {
-  background-image: url("./Medias/3.jpg");
-  background-attachment: fixed;
-}
 
 form {
   max-width: 420px;
   margin: 50px auto;
-  
 }
-.contacts {
-  width: 95%;
-  margin: 0 2%;
-  border-radius: 5px;
-  background: rgba(200, 200, 200, 0.893);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-  overflow: hidden;
-  padding: 3%;
-}
-.contacts h2{
-text-align: center;
+
+.contacts h2 {
+  text-align: center;
 }
 
 .fInput {
-  color: rgb(12, 12, 12);
+  color: rgb(0, 0, 0);
   font-size: 1rem;
   border-radius: 5px;
   line-height: 22px;
@@ -280,7 +253,7 @@ text-align: center;
 }
 
 .fInput:focus {
-  background-color: rgba(245, 245, 245, 0.673);
+  background-color: rgba(245, 245, 245, 0.358);
 }
 
 textarea {
@@ -290,7 +263,7 @@ textarea {
 }
 .submit {
   width: 100%;
-  background: #373636;
+  background: #4d4c4c;
   border-radius: 5px;
   border: 0;
   cursor: pointer;
@@ -300,10 +273,10 @@ textarea {
   padding-bottom: 10px;
   transition: all 0.3s;
   margin-top: -4px;
-  
 }
+
 .submit:hover {
-  background: #010101;
+  background: #2a2a2a;
 }
 @media screen and (min-width: 650px) {
   .menuSocial {
@@ -336,6 +309,7 @@ textarea {
     background: rgb(0, 12, 15);
     box-shadow: 0px 05px 5px rgba(23, 22, 22, 0.496);
     overflow: hidden;
+    z-index: 99999;
   }
   .navBar .logoNav {
     width: 150px;
@@ -370,6 +344,7 @@ textarea {
     float: right;
     margin: 5px;
   }
+
   .artContainer {
     display: block;
   }
