@@ -231,6 +231,21 @@ header h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #1d1d1f;
 }
+#agenda .artContainer{
+  display: flex;
+  
+  
+}
+#agenda .event1,.event2,.event3{
+  border: #1e1d1d 1px solid;
+  height: 90%;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  
+  
+}
 
 form {
   max-width: 500px;
@@ -320,10 +335,7 @@ footer {
   .menuSocial li a:hover::after {
     width: 100%;
   }
-  /* .titleSocial li {
-    padding-bottom: 5px;
-    font-size: 25px;
-  } */
+  
   .navBar {
     position: sticky;
     display: flex;
@@ -384,16 +396,32 @@ footer {
   .floatLeft {
     float: left;
     margin: 5px;
+    max-width: 50%;
   }
   .floatRight {
     float: right;
     margin: 5px;
+    max-width: 50%;
   }
 
   .artContainer {
     display: block;
   }
-  .artContainer img {
-    max-width: 50%;
+  
+  #agenda .artContainer{
+    display: flex;
+    flex-direction: row;
+   align-items: flex-start;
+    height: 100%;
+  }
+  #agenda .event1,.event2,.event3{
+    box-shadow: 0 1px 1px rgba(156, 154, 154, 0.552),
+    0 -1px 1px rgba(145, 142, 142, 0.474);
+    height: 90%;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+   
   }
 }
