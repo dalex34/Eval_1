@@ -184,29 +184,30 @@ header h1 {
   border-radius: 2px;
   box-shadow: 0 1px 1px rgba(156, 154, 154, 0.829),
     0 -1px 1px rgba(145, 142, 142, 0.884);
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: cover; */
+  background-color: #f5f5f7;
   z-index: -3;
 }
-#project {
-  /* background-image: url(/Medias/2.jpg); */
-  background-color: #f5f5f7;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  height: 80%;
+  margin: 0 2%;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  padding: 0 2%;
 }
-#actions {
-  /* background-image: url(/Medias/3.jpg); */
-  background-color: #f5f5f7;
+.container p {
+  font-size: 1em;
+  margin: 20px 2%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #1d1d1f;
 }
-#agenda {
-  /* background-image: url(/Medias/5.jpg); */
-  background-color: #f5f5f7;
-}
-#contact {
-  /* background-image: url(/Medias/message_bottle.jpg); */
-  background-color: #f5f5f7;
-}
-.artContainer img {
+.container img {
   width: 95%;
   filter: sepia(50%) opacity(80%);
   margin: 20px 2%;
@@ -221,30 +222,26 @@ header h1 {
   margin: 0 2%;
   border-radius: 5px;
   background: #ffffff;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.8);
+
   overflow: hidden;
   padding: 3%;
 }
-.artContainer p {
-  font-size: 1em;
-  margin: 20px 2%;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: #1d1d1f;
+
+#agenda h2 {
+  position: relative;
 }
-#agenda .artContainer{
+#agenda .artContainer {
   display: flex;
-  
-  
 }
-#agenda .event1,.event2,.event3{
+#agenda .event1,
+.event2,
+.event3 {
   border: #1e1d1d 1px solid;
   height: 90%;
   width: 100%;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
-  
-  
 }
 
 form {
@@ -252,7 +249,9 @@ form {
   margin: 25px auto;
 }
 
-#contact h2 {
+#contact,
+#agenda,
+h2 {
   margin-top: 20px;
   text-align: center;
 }
@@ -315,7 +314,7 @@ footer {
   .menuSocialResponsive {
     display: none;
   }
-  .menuSocial li a{
+  .menuSocial li a {
     display: inline-block;
     padding-right: 2.5vw;
     margin-left: 2.5vw;
@@ -335,7 +334,7 @@ footer {
   .menuSocial li a:hover::after {
     width: 100%;
   }
-  
+
   .navBar {
     position: sticky;
     display: flex;
@@ -392,7 +391,7 @@ footer {
   .navBar li a:hover::after {
     width: 100%;
   }
-  
+
   .floatLeft {
     float: left;
     margin: 5px;
@@ -404,24 +403,25 @@ footer {
     max-width: 50%;
   }
 
-  .artContainer {
+  .container {
     display: block;
   }
-  
-  #agenda .artContainer{
+
+  #agenda .artContainer {
     display: flex;
     flex-direction: row;
-   align-items: flex-start;
+    align-items: flex-start;
     height: 100%;
   }
-  #agenda .event1,.event2,.event3{
+  #agenda .event1,
+  .event2,
+  .event3 {
     box-shadow: 0 1px 1px rgba(156, 154, 154, 0.552),
-    0 -1px 1px rgba(145, 142, 142, 0.474);
+      0 -1px 1px rgba(145, 142, 142, 0.474);
     height: 90%;
     width: 100%;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-   
   }
 }
