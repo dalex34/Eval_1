@@ -227,9 +227,7 @@ header h1 {
   padding: 3%;
 }
 
-#agenda h2 {
-  position: relative;
-}
+
 #agenda .artContainer {
   display: flex;
 }
@@ -249,10 +247,9 @@ form {
   margin: 25px auto;
 }
 
-#contact,
-#agenda,
+
 h2 {
-  margin-top: 20px;
+  padding-top: 10px;
   text-align: center;
 }
 
