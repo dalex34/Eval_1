@@ -242,6 +242,7 @@ header h1 {
   margin: 10px;
 }
 
+
 form {
   max-width: 500px;
   margin: 25px auto;
@@ -404,7 +405,10 @@ footer {
     display: block;
   }
 
-  #agenda .artContainer {
+  
+}
+@media screen and (min-width: 1000px) {
+#agenda .artContainer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -420,5 +424,8 @@ footer {
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
+  }
+  #agenda img{
+    
   }
 }
