@@ -187,13 +187,42 @@ header h1 {
   background-color: #f5f5f7;
   z-index: -3;
 }
+.read-more-state {
+  display: none;
+}
+.read-more-target {
+  display: none;
+  max-height: 0;
+  font-size: 0;
+  transition: 0.25s ease;
+}
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  display: inline;
+  font-size: inherit;
+  max-height: 999em;
+}
+.read-more-state ~ .read-more-trigger:before {
+  content: "Voir plus...";
+}
 
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: "Voir moins...";
+}
+
+.read-more-trigger {
+   cursor: pointer;
+  display: inline-block;
+  margin-left: 70%;
+  margin-bottom: 1.5em;
+  padding: 0em 0.5em;
+  color: rgb(66, 65, 65);
+  font-size: 0.9em;
+}
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 95%;
-  height: 80%;
   margin: 0 2%;
   border-radius: 5px;
   background: #ffffff;
@@ -201,9 +230,10 @@ header h1 {
   overflow: hidden;
   padding: 0 2%;
 }
-.container p {
+.container p,
+span {
   font-size: 1em;
-  margin: 20px 2%;
+  margin: 0.2em 2%;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #1d1d1f;
 }
@@ -227,7 +257,6 @@ header h1 {
   padding: 3%;
 }
 
-
 #agenda .artContainer {
   display: flex;
 }
@@ -242,12 +271,10 @@ header h1 {
   margin: 10px;
 }
 
-
 form {
   max-width: 500px;
   margin: 25px auto;
 }
-
 
 h2 {
   padding-top: 10px;
@@ -404,11 +431,9 @@ footer {
   .container {
     display: block;
   }
-
-  
 }
 @media screen and (min-width: 1000px) {
-#agenda .artContainer {
+  #agenda .artContainer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -425,7 +450,4 @@ footer {
     padding: 10px;
     margin: 10px;
   }
-  
-    
-  
 }
