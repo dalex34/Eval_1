@@ -230,13 +230,18 @@ header h1 {
   overflow: hidden;
   padding: 0 2%;
 }
-.container p,
-span {
+.container p {
   font-size: 1em;
-  margin: 0.2em 2%;
+  margin: 1em 2%;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #1d1d1f;
 }
+.container span {
+  font-size: 1em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #1d1d1f;
+}
+
 .container img {
   width: 95%;
   filter: sepia(50%) opacity(80%);
